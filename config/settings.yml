@@ -1,5 +1,8 @@
-rails_homepage: "https://www.railstutorial.org/"
-rails_help: "https://www.railstutorial.org/help"
-rails_book: "https://www.railstutorial.org/book"
+rails:
+    homepage: "https://www.railstutorial.org/"
+    help: "https://www.railstutorial.org/help"
+    book: "https://www.railstutorial.org/book"
+    screencasts: "https://screencasts.railstutorial.org/"
+    news: "https://news.railstutorial.org/"
 learn_enough: "https://www.learnenough.com/"
-rails_screencasts: "https://screencasts.railstutorial.org/"
+hartl_page: "https://www.michaelhartl.com/"

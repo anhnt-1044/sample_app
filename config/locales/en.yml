@@ -1,5 +1,18 @@
 en:
+  layouts:
+    _footer:
+      the: "The"
+      by: "by"
+      hartl: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+    _header:
+      home: "Home"
+      help: "Help"
+      login: "Login"
+      sample_app: "sample app"
   static_pages:
+    rort: "Ruby on Rails Tutorial"
     ror: "Ruby on Rails"
     tutorial: "Tutorial"
     and: "and"
@@ -9,8 +22,10 @@ en:
       title: "SampleApp"
     home:
       title: "Home"
+      welcome: "Welcome to the Sample App"
       home_page: "This is the home page for the"
       sample_app: "sample application."
+      sign_up: "Sign up now!"
     help:
       title: "Help"
       get_help: "Get help on the Ruby on Rails Tutorial at the"
@@ -25,3 +40,9 @@ en:
       screencast_series: "screencast series"
       teach_development: "to teach web development with"
       sample_of_tutorial: "This is the sample app for the tutorial."
+    contact:
+      title: "Contact"
+  users:
+    new:
+      title: "Sign up"
+      intro: "This will be a signup page for new users."
