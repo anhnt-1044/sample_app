@@ -1,26 +1,70 @@
 vi:
-  ror: "Ruby on Rails"
-  tutorial: "Tutorial"
-  and: "và"
-  the: ""
-  rort_sample_app: "Ruby on Rails Tutorial Sample App"
-  index:
-    title: "Ứng dụng SampleApp"
-  home:
-    title: "Trang chủ"
-    home_page: "Đây là trang chủ của "
-    sample_app: "sample application."
-  help:
-    title: "Hỗ trợ"
-    get_help: "Tìm kiếm sự hỗ trợ từ Ruby on Rails Tutorial tại trang "
-    book: " quyển sách"
-    get_book: " Để hiểu rõ về ứng dụng mẫu sample application, truy cập"
-    rails_help_page: "hỗ trợ"
-  about:
-    title: "Giới thiệu"
-    learn_enough: "Learn Enough"
-    fa_of_tutorial: "các bài hướng dẫn, là "
-    part_of: "một phần của"
-    screencast_series: "một loạt bài hướng dẫn "
-    teach_development: "dạy lập trình với"
-    sample_of_tutorial: "Đây là ứng dụng mẫu sampleapp của turorial."
+  layouts:
+    _footer:
+      the: "The"
+      by: "by"
+      hartl: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+    _header:
+      home: "Home"
+      help: "Help"
+      login: "Login"
+      sample_app: "sample app"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+      account: "Account"
+  static_pages:
+    rort: "Ruby on Rails Tutorial"
+    ror: "Ruby on Rails"
+    tutorial: "Tutorial"
+    and: "and"
+    the: "The"
+    rort_sample_app: "Ruby on Rails Tutorial Sample App"
+    index:
+      title: "Ứng dụng SampleApp"
+    home:
+      title: "Trang chủ"
+      welcome: "Welcome to the Sample App"
+      home_page: "Đây là trang chủ của"
+      sample_app: "sample application."
+      sign_up: "Sign up now!"
+    help:
+      title: "Hỗ trợ"
+      get_help: "Tìm kiếm sự hỗ trợ từ Ruby on Rails Tutorial tại trang "
+      book: " quyển sách"
+      get_book: " Để hiểu rõ về ứng dụng mẫu sample application, truy cập"
+      rails_help_page: "hỗ trợ"
+    about:
+      title: "Giới thiệu"
+      learn_enough: "Learn Enough"
+      fa_of_tutorial: "các bài hướng dẫn, là "
+      part_of: "một phần của"
+      screencast_series: "một loạt bài hướng dẫn "
+      teach_development: "dạy lập trình với"
+      sample_of_tutorial: "Đây là ứng dụng mẫu sampleapp của turorial."
+    contact:
+      title: "Liên hệ"
+  users:
+    new:
+      title: "Đăng ký"
+      welcome: "Chào mừng đến với Sample App"
+      fail: "Lỗi rồi, gặp lại sau há!"
+      create_account: "Tạo tài khoản"
+      confirm: "Đăng ký"
+      form:
+        name: "Họ và tên"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      signup: "Đăng ký ngay!"
+      new_user: "Chưa có tài khoản?"
+      login: "Đăng nhập"
+      warning: "Cảnh báo!"
+      danger: "Địa chỉ email hoặc mật khẩu chưa đúng"

@@ -6,9 +6,9 @@ module UsersHelper
   end
 
   def display_err errors, field
-    if errors.present?
-      err = "<div class=\"invalid-feedback\"> #{errors.full_messages_for(field)[0]}</div>" if errors.include?(field)
-      err.html_safe if err.present?
-    end
+    return if errors.blank?
+
+    err = errors.full_messages_for(field)[0] if errors.include?(field)
+    content_tag(:div, err, class: "invalid-feedback") if err.present?
   end
 end
