@@ -68,3 +68,7 @@ en:
       login: "Login"
       warning: "Warning!"
       danger: "Invalid email/ password combination"
+      email: "email"
+      password: "password"
+      remember_me: "remember me"
+      remember_text: "Remember me on this computer"
