@@ -1,5 +1,6 @@
 module ApplicationHelper
-  # Returns the full title on a per-page basis.
+  include SessionsHelper
+
   def full_title page_title
     base_title = t "static_pages.rort_sample_app"
     page_title.blank? ? base_title : "#{page_title} | #{base_title}"

@@ -11,6 +11,12 @@ en:
       help: "Help"
       login: "Login"
       sample_app: "sample app"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+      account: "Account"
   static_pages:
     rort: "Ruby on Rails Tutorial"
     ror: "Ruby on Rails"
@@ -54,3 +60,11 @@ en:
         email: "email"
         password: "password"
         password_confirmation: "password confirmation"
+  sessions:
+    new:
+      title: "Log in"
+      signup: "Sign up now!"
+      new_user: "New user?"
+      login: "Login"
+      warning: "Warning!"
+      danger: "Invalid email/ password combination"
