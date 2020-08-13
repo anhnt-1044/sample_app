@@ -19,3 +19,8 @@ validations:
 helper:
   users:
     img_size: 60
+    img_size_list: 50
+links:
+  gravatar_email: "https://gravatar.com/emails"
+pagination:
+  per_page: 25

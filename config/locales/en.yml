@@ -1,4 +1,5 @@
 en:
+  inform_error: "Opp!Somethings is wrong!"
   layouts:
     _footer:
       the: "The"
@@ -49,20 +50,36 @@ en:
     contact:
       title: "Contact"
   users:
+    please_login: "Please log in."
+    index:
+      title: "All users"
     new:
       title: "Sign up"
       welcome: "Welcome to the Sample App"
       fail: "Fail yaa. See you later!"
       create_account: "Create my account"
       confirm: "Confirm"
-      form:
-        name: "name"
-        email: "email"
-        password: "password"
-        password_confirmation: "password confirmation"
+    edit:
+      title: "Edit user"
+      sub_title: "Update your profile"
+      change_email: "change"
+    _form:
+      name: "name"
+      email: "email"
+      password: "password"
+      password_confirmation: "password confirmation"
+      save_changes: "Save changes"
+      create_account: "Create my account"
+    update:
+      success: "Profile updated"
+      fail: "Failed update"
+    user:
+      confirm: "You sure?"
+    delete:
+      del_success: "Delete success"
   sessions:
     new:
-      title: "Log in"
+      title: "Login"
       signup: "Sign up now!"
       new_user: "New user?"
       login: "Login"

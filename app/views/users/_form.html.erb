@@ -1,0 +1,23 @@
+<%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :name, t(".name") %>
+    <%= f.text_field :name, class: "form-control" %>
+    <%= display_err @user.errors, :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email,t(".email") %>
+    <%= f.email_field :email, class: "form-control" %>
+    <%= display_err @user.errors, :email %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, t(".password") %>
+    <%= f.password_field :password, class: "form-control" %>
+    <%= display_err @user.errors, :password %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, t(".password_confirmation") %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+    <%= display_err @user.errors, :password_confirmation %>
+  </div>
+  <%= f.submit yield(:button_text), class: "btn btn-primary btn-block" %>
+<% end %>

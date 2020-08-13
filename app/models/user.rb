@@ -5,13 +5,14 @@ class User < ApplicationRecord
   attr_accessor :remember_token
 
   validates :email, presence: true,
-                  length: {maximum: Settings.validations.user.email.max_length},
-                    format: {with: VALID_EMAIL_REGEX},
-                    uniqueness: true
-  validates :password, presence: true,
-              length: {minimum: Settings.validations.user.password.min_length}
+              length: {maximum: Settings.validations.user.email.max_length},
+              format: {with: VALID_EMAIL_REGEX},
+              uniqueness: true
   validates :name, presence: true,
-                   length: {maximum: Settings.validations.user.name.max_length}
+              length: {maximum: Settings.validations.user.name.max_length}
+
+  validates :password, presence: true, allow_nil: true,
+              length: {minimum: Settings.validations.user.password.min_length}
 
   has_secure_password
 
@@ -19,12 +20,11 @@ class User < ApplicationRecord
 
   class << self
     def digest string
-      cost =
-        if ActiveModel::SecurePassword.min_cost
-          BCrypt::Engine::MIN_COST
-        else
-          BCrypt::Engine.cost
-        end
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
       BCrypt::Password.create(string, cost: cost)
     end
 
