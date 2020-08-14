@@ -22,12 +22,24 @@ module SessionsHelper
     session[:remember_me] == "1" ? remember(user) : forget(user)
   end
 
+  def activate_process user, session
+    login user
+    remember_process user, session
+    redirect_back_or user
+  end
+
+  def not_activate_process
+    message = t "users.account.activate.warning"
+    flash[:warning] = message
+    redirect_to root_url
+  end
+
   def current_user
     if user_id = session[:user_id]
       current_user ||= User.find_by id: user_id
     elsif user_id = cookies.signed[:user_id]
       user = User.find_by id: user_id
-      if user&.authenticated? cookies[:remember_token]
+      if user&.authenticated? :remember, cookies[:remember_token]
         login user
         current_user = user
       end

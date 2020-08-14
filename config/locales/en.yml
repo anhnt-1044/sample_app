@@ -1,4 +1,10 @@
 en:
+  user_mailer:
+    account_activation:
+      hi: "hi"
+      welcome_active: "Welcome to the Sample App! Click on the link below to activate your account: "
+      activate: "Activate"
+      acc_activation: "Account activation"
   inform_error: "Opp!Somethings is wrong!"
   layouts:
     _footer:
@@ -50,6 +56,12 @@ en:
     contact:
       title: "Contact"
   users:
+    account:
+      activate:
+        text: "Please check your mail to activate your account."
+        success: "Account activated!"
+        danger: "Invalid activation link"
+        warning: "Account not activated. Check your email for the activation link."
     please_login: "Please log in."
     index:
       title: "All users"
