@@ -5,10 +5,13 @@ ruby "2.7.0"
 
 gem "bcrypt", "~> 3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "bootstrap-kaminari-views", "~> 0.0.5"
 gem "bootstrap-sass", "~> 3.4.1"
 gem "config"
+gem "faker", "~> 2.1.2"
 gem "jbuilder", "~> 2.7"
 gem "jquery-rails", "4.3.1"
+gem "kaminari", "~> 1.2", ">= 1.2.1"
 gem "mysql2"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
