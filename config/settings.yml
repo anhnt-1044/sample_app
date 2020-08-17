@@ -24,3 +24,4 @@ links:
   gravatar_email: "https://gravatar.com/emails"
 pagination:
   per_page: 10
+pwd_expired: 2000000

@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = Settings.validations.user.email.REGEX
   PERMITTED_ATTR = %i(email password name password_confirmation).freeze
+  PERMITTED_PWD_RESET_ATTR = %i(password password_confirmation).freeze
 
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   validates :email, presence: true,
               length: {maximum: Settings.validations.user.email.max_length},
@@ -51,8 +52,7 @@ class User < ApplicationRecord
   end
 
   def activate
-    update activated: true
-    update activated_at: Time.zone.now
+    update activated: true, activated_at: Time.zone.now
   end
 
   def activated?
@@ -61,6 +61,19 @@ class User < ApplicationRecord
 
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.pwd_expired.seconds.ago
   end
 
   private
