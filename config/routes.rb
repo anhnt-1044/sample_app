@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
     
@@ -14,5 +13,6 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     resources :users
     resources :account_activations, only: :edit
+    resources :password_resets, except: %i(show index destroy)
   end
 end
