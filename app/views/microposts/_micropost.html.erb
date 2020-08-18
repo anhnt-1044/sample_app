@@ -1,0 +1,24 @@
+<li id="micropost-<%= micropost.id %>" class="list-group-item media">
+  <div class="media-left">
+    <%= link_to gravatar_for(micropost.user, options: {size: Settings.micropost.img_size}), micropost.user %>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to micropost.user_name, micropost.user %>
+    </h4>
+    <div class="content">
+      <div class="text">
+        <%= micropost.content %>
+      </div>
+      <%= image_tag micropost.display_image if micropost.picture.attached? %>
+    </div>
+    <div class="timestamp">
+      <%= t ".posted" %>
+      <%= time_ago_in_words micropost.created_at %>
+      <%= t ".ago" %>
+      <% if current_user? micropost.user %>
+        <%= link_to t(".delete"), micropost, method: :delete, data: {confirm: t(".confirm")} %>
+      <% end %>
+    </div>
+  </div>
+</li>

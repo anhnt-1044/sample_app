@@ -22,14 +22,17 @@ en:
     new:
       submit: "Submit"
       forgot_password: "Forgot password"
+  js:
+    microposts:
+      maximum_img_size: 30
   layouts:
-    _footer:
+    footer:
       the: "The"
       by: "by"
       hartl: "Michael Hartl"
       about: "About"
       contact: "Contact"
-    _header:
+    header:
       home: "Home"
       help: "Help"
       login: "Login"
@@ -55,6 +58,8 @@ en:
       home_page: "This is the home page for the"
       sample_app: "sample application."
       sign_up: "Sign up now!"
+      feed_title: "Micropost Feed"
+      alt: "Rails logo"
     help:
       title: "Help"
       get_help: "Get help on the Ruby on Rails Tutorial at the"
@@ -87,12 +92,14 @@ en:
       fail: "Fail yaa. See you later!"
       create_account: "Create my account"
       confirm: "Confirm"
-      error: "Error rồi!"
+      error:
+        one: "Has %{count} error"
+        other: "Has %{count} errors"
     edit:
       title: "Edit user"
       sub_title: "Update your profile"
       change_email: "change"
-    _form:
+    form:
       name: "name"
       email: "email"
       password: "password"
@@ -106,6 +113,9 @@ en:
       confirm: "You sure?"
     delete:
       del_success: "Delete success"
+    show:
+      micropost: "Microposts"
+      err: "Error"
   sessions:
     new:
       title: "Login"
@@ -129,3 +139,40 @@ en:
         not_valid_user: "Email's not existed"
         failed_update: "Update failed"
       success: "Password has been reset."
+    micropost:
+      create:
+        success: "Micropost created!"
+        fail: "MIcropost save failed!"
+      destroy:
+        success: "Micropost deleted"
+        fail: "Delete micropost failed"
+      error: "Error!"
+  password_resets:
+    new:
+      forgot_password: "Forgot password"
+  user_mailer:
+    password_reset:
+      title: "Password reset"
+      reset_pwd: "Reset password"
+  shared:
+    user_info:
+      view_profile: "view my profile"
+    micropost_form:
+      post: "Post"
+      place_holder: "Compose new micropost..."
+      alert_max_size: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      count_micropost:
+        one: "%{count} micropost"
+        other: "%{count} microposts"
+  microposts:
+    model:
+      image:
+        type: "must be a valid image format"
+        size: "should be less than 5MB"
+    maximum_img_size: "Maximum file size is 5MB. Please choose a smaller file."
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+      delete: "delete"
+      confirm: "You sure?"

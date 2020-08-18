@@ -13,9 +13,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    return if @user
-
-    redirect_to root_path
+    @microposts =
+        @user.microposts.page(params[:page]).per Settings.pagination.per_page
   end
 
   def create
