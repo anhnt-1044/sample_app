@@ -1,0 +1,12 @@
+<div class="media">
+  <div class="media-left">
+    <%= link_to gravatar_for(current_user, options: {size: Settings.user_info.img_size}), current_user %>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= current_user.name %>
+    </h4>
+    <span><%= link_to t(".view_profile"), current_user %></span>
+    <span><%= t ".count_micropost", count: current_user.microposts.size %></span>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-class PasswordResetsController < ApplicationController  
+class PasswordResetsController < ApplicationController
   before_action :find_user, only: %i(create edit update)
   before_action :valid_user, :check_expiration, only: %i(edit update)
 
