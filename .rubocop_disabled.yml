@@ -70,3 +70,6 @@ Lint/AssignmentInCondition:
   Description: "Don't use assignment in conditions."
   Enabled: false
 
+Rails/InverseOf: 
+  Description: "Specify an :inverse_of option."
+  Enabled: false

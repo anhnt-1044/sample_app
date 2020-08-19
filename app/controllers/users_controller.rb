@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :get_user_by_id, except: %i(index new create)
+  before_action :find_user, except: %i(index new create)
   before_action :logged_in_user, except: %i(new show create)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def show
     @microposts =
-        @user.microposts.page(params[:page]).per Settings.pagination.per_page
+      @user.microposts.page(params[:page]).per Settings.pagination.per_page
   end
 
   def create
@@ -46,8 +46,9 @@ class UsersController < ApplicationController
       flash[:success] = t ".delete.del_success"
       redirect_to users_url
     else
-      flash[:danger] = t "inform_error"
+      flash.now[:danger] = t "inform_error"
     end
+    redirect_to users_url
   end
 
   private
@@ -56,27 +57,11 @@ class UsersController < ApplicationController
     params.require(:user).permit User::PERMITTED_ATTR
   end
 
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t ".please_login"
-    redirect_to login_url
-  end
-
   def correct_user
     redirect_to root_url unless current_user? @user
   end
 
   def admin_user
     redirect_to root_url unless current_user.admin?
-  end
-
-  def get_user_by_id
-    @user = User.find_by id: params[:id] if params[:id]
-    return if @user
-
-    flash[:danger] = t "users.show.notice_error"
-    redirect_to root_url
   end
 end

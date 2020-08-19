@@ -39,6 +39,9 @@ micropost:
     micro_form:
       img_accept: "image/jpeg,image/gif,image/png"
   img_size: 60
-static-pages:
+static_pages:
   home:
     img: "rails.svg"
+users:
+  show_follow:
+    img_size: 30
