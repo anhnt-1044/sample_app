@@ -324,7 +324,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   config
   faker (~> 2.1.2)
-  i18n-js (~> 3.7, >= 3.7.1)
+  i18n-js
   image_processing (= 1.9.3)
   jbuilder (~> 2.7)
   jquery-rails (= 4.3.1)

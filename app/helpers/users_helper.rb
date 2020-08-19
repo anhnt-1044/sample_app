@@ -12,4 +12,8 @@ module UsersHelper
     err = errors.full_messages_for(field)[0] if errors.include? field
     content_tag(:div, err, class: "invalid-feedback") if err.present?
   end
+
+  def remove_relationship
+    current_user.active_relationships.find_by followed_id: @user.id
+  end
 end

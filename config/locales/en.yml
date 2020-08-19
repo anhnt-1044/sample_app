@@ -84,6 +84,8 @@ en:
         danger: "Invalid activation link"
         warning: "Account not activated. Check your email for the activation link."
     please_login: "Please log in."
+    following: "Following"
+    followers: "Follower"
     index:
       title: "All users"
     new:
@@ -116,6 +118,14 @@ en:
     show:
       micropost: "Microposts"
       err: "Error"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    show_follow:
+      view_profile: "view my profile"
+      micropost: "Microposts:"
+      no_followers: "No followers"
   sessions:
     new:
       title: "Login"
@@ -147,6 +157,8 @@ en:
         success: "Micropost deleted"
         fail: "Delete micropost failed"
       error: "Error!"
+    relationship:
+      not_exist: "User not found"
   password_resets:
     new:
       forgot_password: "Forgot password"
@@ -176,3 +188,10 @@ en:
       ago: "ago."
       delete: "delete"
       confirm: "You sure?"
+    js:
+      maximum_img_size: "Maximum file size is 5MB. Please choose a smaller file."
+  follow_user:
+    view:
+      stats:
+        following: "following"
+        followers: "followers"
