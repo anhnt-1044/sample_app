@@ -14,6 +14,6 @@ module UsersHelper
   end
 
   def remove_relationship
-    current_user.active_relationships.find_by followed_id: @user.id
+    current_user.active_relationships.find_by followed_id: user.id
   end
 end

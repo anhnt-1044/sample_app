@@ -33,11 +33,11 @@ micropost:
     display_img:
       height: 500
       width: 500
-    content_type: /%w(image/jpeg image/gif image/png)/
+    content_type: /%w(image/jpeg image/gif image/png image/jpg)/
     image_size_mb: 5
   view:
     micro_form:
-      img_accept: "image/jpeg,image/gif,image/png"
+      img_accept: "image/jpeg,image/gif,image/png,image/jpg"
   img_size: 60
 static_pages:
   home:
